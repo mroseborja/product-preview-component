@@ -1,0 +1,154 @@
+:root {
+  --clr-primary-200: hsl(30, 38%, 92%);
+  --clr-primary-400: hsl(158, 36%, 37%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(228, 12%, 48%);
+  --clr-neutral-900: hsl(212, 21%, 14%);
+
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-accent: "Fraunces", serif;
+
+  --fw-normal: 500;
+  --fw-bold: 700;
+
+  --fs-small: 0.8125rem;
+  --fs-regular: 0.85rem;
+  --fs-large: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: var(--clr-primary-200);
+  color: var(--clr-neutral-300);
+  font-family: var(--ff-primary);
+  font-size: 0.875rem;
+  font-weight: var(--fw-normal);
+}
+
+.card {
+  background-color: var(--clr-neutral-100);
+  margin: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  font-size: var(--fs-regular);
+  padding-block: 1rem;
+  padding-inline: 1.95rem;
+  margin-top: 1rem;
+}
+
+.product-category {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.product-name,
+.product-sale-price {
+  font-family: var(--ff-accent);
+  line-height: 1;
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-large);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.product-sale-price {
+  color: var(--clr-primary-400);
+  margin-right: 1rem;
+}
+
+.product-original-price {
+  font-size: var(--fs-small);
+  text-decoration: line-through;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--clr-primary-400);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-100);
+  border: none;
+  border-radius: 0.5em;
+  padding-block: 0.75em;
+}
+
+.button img {
+  margin-right: 0.75rem;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--clr-neutral-900);
+}
